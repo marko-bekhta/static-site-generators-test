@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Hibernate
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: Hibernate Team
 language: en
 timezone: ''
 
@@ -35,12 +35,12 @@ new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
-  enable: true # Open external links in new tab
+  enable: true # Open external links.yml in new tab
   field: site # Apply to the whole site
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: hibernate
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

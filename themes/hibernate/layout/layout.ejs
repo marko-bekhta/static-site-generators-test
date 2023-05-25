@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- partial('partial/head') %>
+<body>
+  <div id="container">
+    <%- partial('partial/header') %>
+    <%- body %>
+    <%- partial('partial/footer') %>
+  </div>
+</body>
+
+<!--<script type="text/javascript">-->
+<!--  $(function() {-->
+<!--    $('#mobile-menu').sidebar('setting', {-->
+<!--      transition: 'push'-->
+<!--    });-->
+<!--    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');-->
+
+<!--    $('.ui.accordion').accordion();-->
+
+<!--    $(window).scroll(function(e) {-->
+<!--      if($(this).scrollTop()>150){-->
+<!--        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px-->
+<!--      }-->
+<!--      else {-->
+<!--        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px-->
+<!--      }-->
+<!--    });-->
+
+<!--    $('.back-to-top').click(function(e) {-->
+<!--      $('body, html').animate({scrollTop:0}, 800);-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
+</html>
