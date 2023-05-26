@@ -5,7 +5,10 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const eleventyAsciidoc = require("eleventy-plugin-asciidoc");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const sass = require("sass");
 
 const pluginDrafts = require("./eleventy.config.drafts.js");
 const pluginImages = require("./eleventy.config.images.js");
@@ -36,6 +39,27 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginBundle);
+
+	//asciidoc plugin:
+	eleventyConfig.addPlugin(eleventyAsciidoc, {
+		template_dir: `${__dirname}/asciidoc-templates`,
+	});
+	eleventyConfig.addPlugin(EleventyRenderPlugin);
+
+	// Creates the extension for use
+	eleventyConfig.addExtension("scss", {
+		outputFileExtension: "css", // optional, default: "html"
+
+		// `compile` is called once per .scss file in the input directory
+		compile: async function(inputContent) {
+			let result = sass.compileString(inputContent);
+
+			// This is the render function, `data` is the full data cascade
+			return async (data) => {
+				return result.css;
+			};
+		}
+	});
 
 	// Filters
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -108,6 +132,9 @@ module.exports = function(eleventyConfig) {
 			"njk",
 			"html",
 			"liquid",
+			"ejs",
+			"adoc",
+			"scss"
 		],
 
 		// Pre-process *.md files with: (default: `liquid`)

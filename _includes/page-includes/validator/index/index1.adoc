@@ -1,0 +1,24 @@
+== Application layer agnostic validation
+
+Hibernate Validator allows to express and validate application constraints. The default metadata source are
+annotations, with the ability to override and extend through the use of XML. It is not tied to a specific
+application tier or programming model and is available for both server and client application programming. But a
+simple example says more than 1000 words:
+
+[source,java]
+----
+public class Car {
+
+@NotNull
+private String manufacturer;
+
+@NotNull
+@Size(min = 2, max = 14)
+private String licensePlate;
+
+@Min(2)
+private int seatCount;
+
+// ...
+}
+----

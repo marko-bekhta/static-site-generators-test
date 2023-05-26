@@ -1,0 +1,3 @@
+== Added value
+
+Hibernate Validator offers additional value on top of the features required by Bean Validation. For example, a http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-programmatic-api[programmatic constraint configuration API] as well as an http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-annotation-processor[annotation processor] which plugs into the build process and raises compilation errors whenever constraint annotations are incorrectly used.

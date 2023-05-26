@@ -1,0 +1,818 @@
+{
+	"orm": {
+		"name": "Hibernate ORM",
+		"icon": "icon-table",
+		"description": "Idiomatic persistence for Java and relational databases.\n",
+		"links": {
+			"reference_doc": {
+				"html": "https://docs.jboss.org/hibernate/orm/{series.version}/userguide/html_single/Hibernate_User_Guide.html",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/orm/userguide/html_single/Hibernate_User_Guide.html"
+				}
+			},
+			"javadoc": {
+				"html": "https://docs.jboss.org/hibernate/orm/{series.version}/javadocs/",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/orm/javadocs/"
+				}
+			},
+			"getting_started_guide": {
+				"latest_stable_only": true,
+				"html": "/orm/documentation/getting-started"
+			},
+			"migration_guide": {
+				"html": "https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides"
+			},
+			"dist": null
+		},
+		"maven": {
+			"group_id": "org.hibernate.orm",
+			"repo": {
+				"central": {
+					"artifact_id_pattern": "hibernate-*"
+				}
+			}
+		},
+		"blog_tag": "Hibernate ORM",
+		"blog_tag_url": "hibernate-orm",
+		"license": {
+			"name": "LGPL V2.1",
+			"url": "https://hibernate.org/license/"
+		},
+		"jira": {
+			"key": "HHH"
+		},
+		"github": {
+			"project": "hibernate-orm"
+		},
+		"integrations": {
+			"java": {
+				"name": "Java",
+				"url": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+			},
+			"jpa": {
+				"name": "JPA",
+				"url": "https://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html"
+			},
+			"jakarta_jpa": {
+				"name": "Jakarta Persistence",
+				"url": "https://jakarta.ee/specifications/persistence/"
+			}
+		},
+		"menu": {
+			"intern": [
+				{
+					"name": "About",
+					"href": "/orm/",
+					"css_class": "home"
+				},
+				{
+					"name": "Releases",
+					"href": "/orm/releases/",
+					"css_class": "tags",
+					"releases_submenu": true
+				},
+				{
+					"name": "Documentation",
+					"href": "/orm/documentation/",
+					"css_class": "folder open",
+					"documentation_submenu": true
+				},
+				{
+					"name": "Migration guides",
+					"href": "https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides",
+					"css_class": "share"
+				},
+				{
+					"name": "Books",
+					"href": "/orm/books/",
+					"css_class": "book"
+				},
+				{
+					"name": "Roadmap",
+					"href": "https://github.com/hibernate/hibernate-orm/wiki/Roadmap",
+					"css_class": "road"
+				},
+				{
+					"name": "Tooling",
+					"href": "/orm/tooling/",
+					"css_class": "wrench"
+				},
+				{
+					"name": "Envers",
+					"href": "/orm/envers/",
+					"css_class": "time"
+				},
+				{
+					"name": "Contribute",
+					"href": "/orm/contribute/",
+					"css_class": "users"
+				},
+				{
+					"name": "Paid support",
+					"href": "/orm/support/",
+					"css_class": "doctor"
+				},
+				{
+					"name": "FAQ",
+					"href": "/orm/faq/",
+					"css_class": "help circle"
+				}
+			],
+			"extern": [
+				{
+					"name": "Source code",
+					"href": "https://github.com/hibernate/hibernate-orm",
+					"css_class": "code"
+				},
+				{
+					"name": "Issue tracker",
+					"href": "https://hibernate.atlassian.net/browse/HHH",
+					"css_class": "bug"
+				},
+				{
+					"name": "Security issue",
+					"href": "https://access.redhat.com/security/team/contact/",
+					"css_class": "lock"
+				},
+				{
+					"name": "Forum",
+					"href": "https://discourse.hibernate.org/c/hibernate-orm",
+					"css_class": "comments"
+				},
+				{
+					"name": "CI",
+					"href": "https://ci.hibernate.org/",
+					"css_class": "treatment"
+				}
+			]
+		}
+	},
+	"search": {
+		"name": "Hibernate Search",
+		"icon": "icon-search",
+		"description": "Automatic indexing of Hibernate ORM entities into Apache Lucene or Elasticsearch.\nAdvanced search API: full-text, geospatial, aggregations and more.\n",
+		"links": {
+			"reference_doc": {
+				"html": "https://docs.jboss.org/hibernate/search/{series.version}/reference/en-US/html_single/",
+				"pdf": "https://docs.jboss.org/hibernate/search/{series.version}/reference/en-US/pdf/hibernate_search_reference.pdf",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/",
+					"pdf": "https://docs.jboss.org/hibernate/stable/search/reference/en-US/pdf/hibernate_search_reference.pdf"
+				}
+			},
+			"javadoc": {
+				"html": "https://docs.jboss.org/hibernate/search/{series.version}/api/",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/search/api/"
+				}
+			},
+			"getting_started_guide": {
+				"html": "https://docs.jboss.org/hibernate/search/{series.version}/reference/en-US/html_single/#getting-started",
+				"pdf": "https://docs.jboss.org/hibernate/search/{series.version}/reference/en-US/pdf/hibernate_search_reference.pdf#getting-started"
+			},
+			"migration_guide": {
+				"html": "https://docs.jboss.org/hibernate/search/{series.version}/migration/html_single/",
+				"pdf": "https://docs.jboss.org/hibernate/search/{series.version}/migration/pdf/hibernate_search_migration.pdf"
+			},
+			"dist": {
+				"sourceforge": {
+					"zip": "https://sourceforge.net/projects/hibernate/files/hibernate-search/{release.version}/hibernate-search-{release.version}-dist.zip/download"
+				}
+			}
+		},
+		"maven": {
+			"signing": {
+				"since": "2022-01-26T00:00:00.000Z"
+			},
+			"group_id": "org.hibernate.search",
+			"main_artifact_id": "hibernate-search-mapper-orm",
+			"repo": {
+				"central": {
+					"artifact_id_pattern": "hibernate-search-*"
+				},
+				"jboss": {
+					"artifact_id_pattern": "hibernate-search-*"
+				}
+			}
+		},
+		"blog_tag": "Hibernate Search",
+		"blog_tag_url": "hibernate-search",
+		"license": {
+			"name": "LGPL v2.1",
+			"url": "https://raw.github.com/hibernate/hibernate-search/main/lgpl.txt"
+		},
+		"jira": {
+			"key": "HSEARCH"
+		},
+		"github": {
+			"project": "hibernate-search"
+		},
+		"integrations": {
+			"java": {
+				"name": "Java",
+				"url": "https://www.oracle.com/java/technologies/javase-downloads.html"
+			},
+			"orm": {
+				"name": "Hibernate ORM",
+				"url": "/orm/"
+			},
+			"orm6": {
+				"name": "Hibernate ORM 6 (through *-orm6 artifacts)",
+				"url": "/orm/releases/6.0/"
+			},
+			"lucene": {
+				"name": "Apache Lucene",
+				"url": "https://lucene.apache.org/core/"
+			},
+			"elasticsearch": {
+				"name": "Elasticsearch server",
+				"url": "https://www.elastic.co/products/elasticsearch"
+			},
+			"opensearch": {
+				"name": "OpenSearch server",
+				"url": "https://www.opensearch.org"
+			}
+		},
+		"menu": {
+			"intern": [
+				{
+					"name": "About",
+					"href": "/search/",
+					"css_class": "home"
+				},
+				{
+					"name": "Releases",
+					"href": "/search/releases/",
+					"css_class": "tags",
+					"releases_submenu": true
+				},
+				{
+					"name": "Documentation",
+					"href": "/search/documentation/",
+					"css_class": "book"
+				},
+				{
+					"name": "Migration guides",
+					"href": "/search/documentation/migrate/",
+					"css_class": "share"
+				},
+				{
+					"name": "More resources",
+					"href": "/search/more-resources/",
+					"css_class": "bookmark"
+				},
+				{
+					"name": "Roadmap",
+					"href": "/search/roadmap/",
+					"css_class": "road"
+				},
+				{
+					"name": "Contribute",
+					"href": "/search/contribute/",
+					"css_class": "users"
+				},
+				{
+					"name": "Tooling",
+					"href": "/search/tooling/",
+					"css_class": "wrench"
+				},
+				{
+					"name": "Paid support",
+					"href": "/search/support/",
+					"css_class": "doctor"
+				},
+				{
+					"name": "FAQ",
+					"href": "/search/faq/",
+					"css_class": "circle help"
+				}
+			],
+			"extern": [
+				{
+					"name": "Source code",
+					"href": "https://github.com/hibernate/hibernate-search",
+					"css_class": "code"
+				},
+				{
+					"name": "Issue tracker",
+					"href": "https://hibernate.atlassian.net/browse/HSEARCH",
+					"css_class": "bug"
+				},
+				{
+					"name": "Security issue",
+					"href": "https://access.redhat.com/security/team/contact/",
+					"css_class": "lock"
+				},
+				{
+					"name": "Forum",
+					"href": "https://discourse.hibernate.org/c/hibernate-search",
+					"css_class": "comments"
+				},
+				{
+					"name": "Wiki",
+					"href": "https://community.jboss.org/en/hibernate/search",
+					"css_class": "edit"
+				},
+				{
+					"name": "CI",
+					"href": "https://ci.hibernate.org/job/hibernate-search/",
+					"css_class": "treatment"
+				}
+			]
+		}
+	},
+	"tools": {
+		"name": "Hibernate Tools",
+		"icon": "icon-wrench",
+		"description": "Working with Hibernate is very easy and developers enjoy using the APIs and the query language.\nEven creating mapping metadata is not an overly complex task once you've mastered the basics.\nHibernate Tools makes working with Hibernate or JPA even more pleasant.\n",
+		"blog_tag": "JBoss Tools",
+		"blog_tag_url": "jboss-tools",
+		"license": {
+			"name": "LGPL v2.1",
+			"url": "https://github.com/hibernate/hibernate-tools/blob/master/lgpl.txt"
+		},
+		"menu": {
+			"intern": [
+				{
+					"name": "About",
+					"href": "/tools/",
+					"css_class": "home"
+				}
+			],
+			"extern": [
+				{
+					"name": "Downloads",
+					"href": "https://tools.jboss.org/downloads/",
+					"css_class": "cloud download"
+				},
+				{
+					"name": "Documentation",
+					"href": "https://tools.jboss.org/documentation/",
+					"css_class": "book"
+				},
+				{
+					"name": "Source code",
+					"href": "https://github.com/hibernate/hibernate-tools",
+					"css_class": "code"
+				},
+				{
+					"name": "Issue tracker",
+					"href": "https://hibernate.atlassian.net/browse/HBX",
+					"css_class": "bug"
+				},
+				{
+					"name": "Security issue",
+					"href": "https://access.redhat.com/security/team/contact/",
+					"css_class": "lock"
+				},
+				{
+					"name": "Forum",
+					"href": "https://discourse.hibernate.org/c/hibernate-tools",
+					"css_class": "comments"
+				},
+				{
+					"name": "Wiki",
+					"href": "https://community.jboss.org/en/tools",
+					"css_class": "edit"
+				},
+				{
+					"name": "CI",
+					"href": "https://ci.hibernate.org/view/Tools/",
+					"css_class": "treatment"
+				}
+			]
+		}
+	},
+	"validator": {
+		"name": "Hibernate Validator",
+		"icon": "icon-check",
+		"description": "Express validation rules in a standardized way using annotation-based constraints and benefit from transparent integration with a wide variety of frameworks.\n",
+		"links": {
+			"reference_doc": {
+				"html": "https://docs.jboss.org/hibernate/validator/{series.version}/reference/en-US/html_single/",
+				"pdf": "https://docs.jboss.org/hibernate/validator/{series.version}/reference/en-US/pdf/hibernate_validator_reference.pdf",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/",
+					"pdf": "https://docs.jboss.org/hibernate/stable/validator/reference/en-US/pdf/hibernate_validator_reference.pdf"
+				}
+			},
+			"javadoc": {
+				"html": "https://docs.jboss.org/hibernate/validator/{series.version}/api/",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/validator/api/"
+				}
+			},
+			"getting_started_guide": {
+				"html": "https://docs.jboss.org/hibernate/validator/{series.version}/reference/en-US/html_single/#validator-gettingstarted",
+				"pdf": "https://docs.jboss.org/hibernate/validator/{series.version}/reference/en-US/pdf/hibernate_validator_reference.pdf#validator-gettingstarted"
+			},
+			"migration_guide": {
+				"html": "/validator/documentation/migration-guide/#{series.version.dashes}-x"
+			},
+			"dist": {
+				"sourceforge": {
+					"zip": "https://sourceforge.net/projects/hibernate/files/hibernate-validator/{release.version}/hibernate-validator-{release.version}-dist.zip/download"
+				}
+			}
+		},
+		"maven": {
+			"signing": {
+				"since": "2022-02-08T00:00:00.000Z"
+			},
+			"group_id": "org.hibernate.validator",
+			"main_artifact_id": "hibernate-validator",
+			"repo": {
+				"central": {
+					"artifact_id_pattern": "hibernate-validator*"
+				},
+				"jboss": {
+					"artifact_id_pattern": "hibernate-validator*"
+				}
+			}
+		},
+		"blog_tag": "Hibernate Validator",
+		"blog_tag_url": "hibernate-validator",
+		"license": {
+			"name": "ASL v2",
+			"url": "https://raw.github.com/hibernate/hibernate-validator/master/license.txt"
+		},
+		"jira": {
+			"key": "HV"
+		},
+		"github": {
+			"project": "hibernate-validator"
+		},
+		"integrations": {
+			"java": {
+				"name": "Java",
+				"url": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+			},
+			"bv": {
+				"name": "Bean Validation",
+				"url": "https://beanvalidation.org/"
+			},
+			"ee": {
+				"name": "Java EE",
+				"url": "https://www.oracle.com/java/technologies/java-ee-glance.html"
+			},
+			"jbv": {
+				"name": "Jakarta Bean Validation",
+				"url": "https://beanvalidation.org/"
+			},
+			"jee": {
+				"name": "Jakarta EE",
+				"url": "https://jakarta.ee"
+			}
+		},
+		"menu": {
+			"intern": [
+				{
+					"name": "About",
+					"href": "/validator/",
+					"css_class": "home"
+				},
+				{
+					"name": "Releases",
+					"href": "/validator/releases/",
+					"css_class": "tags",
+					"releases_submenu": true
+				},
+				{
+					"name": "Documentation",
+					"href": "/validator/documentation/",
+					"css_class": "book"
+				},
+				{
+					"name": "Migration guides",
+					"href": "/validator/documentation/migration-guide/",
+					"css_class": "share"
+				},
+				{
+					"name": "Roadmap",
+					"href": "/validator/roadmap/",
+					"css_class": "road"
+				},
+				{
+					"name": "Contribute",
+					"href": "/validator/contribute/",
+					"css_class": "users"
+				},
+				{
+					"name": "Tooling",
+					"href": "/validator/tooling/",
+					"css_class": "wrench"
+				},
+				{
+					"name": "Paid support",
+					"href": "/validator/support/",
+					"css_class": "doctor"
+				},
+				{
+					"name": "FAQ",
+					"href": "/validator/faq/",
+					"css_class": "circle help"
+				}
+			],
+			"extern": [
+				{
+					"name": "Source code",
+					"href": "https://github.com/hibernate/hibernate-validator",
+					"css_class": "code"
+				},
+				{
+					"name": "Issue tracker",
+					"href": "https://hibernate.atlassian.net/browse/HV",
+					"css_class": "bug"
+				},
+				{
+					"name": "Security issue",
+					"href": "https://access.redhat.com/security/team/contact/",
+					"css_class": "lock"
+				},
+				{
+					"name": "Forum",
+					"href": "https://discourse.hibernate.org/c/hibernate-validator",
+					"css_class": "comments"
+				},
+				{
+					"name": "CI",
+					"href": "https://ci.hibernate.org/",
+					"css_class": "treatment"
+				}
+			]
+		}
+	},
+	"ogm": {
+		"name": "Hibernate OGM",
+		"description": "The power and simplicity of JPA for NoSQL datastores. Including support for associations, sub-classes, queries and much more.",
+		"deprecation_notice": "Hibernate OGM is not maintained anymore.",
+		"icon": "icon-sitemap",
+		"links": {
+			"reference_doc": {
+				"html": "https://docs.jboss.org/hibernate/ogm/{series.version}/reference/en-US/html_single/",
+				"pdf": "https://docs.jboss.org/hibernate/ogm/{series.version}/reference/en-US/pdf/hibernate_ogm_reference.pdf",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/ogm/reference/en-US/html_single/",
+					"pdf": "https://docs.jboss.org/hibernate/stable/ogm/reference/en-US/pdf/hibernate_ogm_reference.pdf"
+				}
+			},
+			"javadoc": {
+				"html": "https://docs.jboss.org/hibernate/ogm/{series.version}/api/",
+				"latest_stable": {
+					"html": "https://docs.jboss.org/hibernate/stable/ogm/api/"
+				}
+			},
+			"getting_started_guide": {
+				"html": "https://docs.jboss.org/hibernate/ogm/{series.version}/reference/en-US/html_single/#ogm-gettingstarted",
+				"pdf": "https://docs.jboss.org/hibernate/ogm/{series.version}/reference/en-US/pdf/hibernate_ogm_reference.pdf#ogm-gettingstarted"
+			},
+			"migration_guide": {
+				"html": "https://developer.jboss.org/wiki/HibernateOGMMigrationNotes"
+			},
+			"dist": {
+				"sourceforge": {
+					"zip": "https://sourceforge.net/projects/hibernate/files/hibernate-ogm/{release.version}/hibernate-ogm-{release.version}-dist.zip/download"
+				}
+			}
+		},
+		"maven": {
+			"group_id": "org.hibernate.ogm",
+			"main_artifact_id": "hibernate-ogm-core",
+			"repo": {
+				"central": {
+					"artifact_id_pattern": "hibernate-ogm-*"
+				},
+				"jboss": {
+					"artifact_id_pattern": "hibernate-ogm-*"
+				}
+			}
+		},
+		"javadoc_path": "api",
+		"blog_tag": "Hibernate OGM",
+		"blog_tag_url": "hibernate-ogm",
+		"license": {
+			"name": "LGPL v2.1",
+			"url": "https://raw.githubusercontent.com/hibernate/hibernate-ogm/main/license.txt"
+		},
+		"jira": {
+			"key": "OGM"
+		},
+		"github": {
+			"project": "hibernate-ogm"
+		},
+		"integrations": {
+			"java": {
+				"name": "Java",
+				"url": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+			},
+			"jpa": {
+				"name": "JPA",
+				"url": "https://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html"
+			},
+			"orm": {
+				"name": "Hibernate ORM",
+				"url": "/orm/"
+			},
+			"search": {
+				"name": "Hibernate Search",
+				"url": "/search/"
+			}
+		},
+		"menu": {
+			"intern": [
+				{
+					"name": "About",
+					"href": "/ogm/",
+					"css_class": "home"
+				},
+				{
+					"name": "Releases",
+					"href": "/ogm/releases/",
+					"css_class": "tags",
+					"releases_submenu": true
+				},
+				{
+					"name": "Documentation",
+					"href": "/ogm/documentation/",
+					"css_class": "book"
+				},
+				{
+					"name": "Roadmap",
+					"href": "/ogm/roadmap/",
+					"css_class": "road"
+				},
+				{
+					"name": "Contribute",
+					"href": "/ogm/contribute/",
+					"css_class": "users"
+				},
+				{
+					"name": "Paid support",
+					"href": "/ogm/support/",
+					"css_class": "doctor"
+				},
+				{
+					"name": "FAQ",
+					"href": "/ogm/faq/",
+					"css_class": "circle help"
+				}
+			],
+			"extern": [
+				{
+					"name": "Source code",
+					"href": "https://github.com/hibernate/hibernate-ogm",
+					"css_class": "code"
+				},
+				{
+					"name": "Issue tracker",
+					"href": "https://hibernate.atlassian.net/browse/OGM",
+					"css_class": "bug"
+				},
+				{
+					"name": "Security issue",
+					"href": "https://access.redhat.com/security/team/contact/",
+					"css_class": "lock"
+				},
+				{
+					"name": "Forum",
+					"href": "https://discourse.hibernate.org/c/hibernate-ogm",
+					"css_class": "comments"
+				},
+				{
+					"name": "CI",
+					"href": "https://ci.hibernate.org/job/hibernate-ogm-master/",
+					"css_class": "treatment"
+				},
+				{
+					"name": "Wiki",
+					"href": "https://community.jboss.org/en/hibernate/ogm",
+					"css_class": "edit"
+				}
+			]
+		}
+	},
+	"reactive": {
+		"name": "Hibernate Reactive",
+		"description": "Add a reactive API to Hibernate ORM, supporting non-blocking database drivers and a reactive style of interaction with the database.\n",
+		"icon": "icon-retweet",
+		"links": {
+			"reference_doc": {
+				"html": "/reactive/documentation/{series.version}/reference/html_single/",
+				"latest_stable": {
+					"html": "/reactive/documentation/{series.version}/reference/html_single/"
+				}
+			},
+			"javadoc": {
+				"html": "/reactive/documentation/{series.version}/javadocs/",
+				"latest_stable": {
+					"html": "/reactive/documentation/{series.version}/javadocs/"
+				}
+			},
+			"getting_started_guide": {
+				"html": "/reactive/documentation/{series.version}/reference/html_single/#getting-started"
+			},
+			"dist": null
+		},
+		"maven": {
+			"group_id": "org.hibernate.reactive",
+			"main_artifact_id": "hibernate-reactive-core",
+			"repo": {
+				"central": {
+					"artifact_id_pattern": "hibernate-reactive-*"
+				},
+				"jboss": {
+					"artifact_id_pattern": "hibernate-reactive-*"
+				}
+			}
+		},
+		"blog_tag": "Hibernate Reactive",
+		"blog_tag_url": "hibernate-reactive",
+		"license": {
+			"name": "ASL v2",
+			"url": "https://raw.githubusercontent.com/hibernate/hibernate-reactive/main/LICENSE"
+		},
+		"jira": {
+			"key": null
+		},
+		"github": {
+			"project": "hibernate-reactive"
+		},
+		"integrations": {
+			"java": {
+				"name": "Java",
+				"url": "https://www.oracle.com/technetwork/java/javase/downloads/index.html"
+			},
+			"orm": {
+				"name": "Hibernate ORM",
+				"url": "/orm/"
+			},
+			"vertx": {
+				"name": "Vert.x",
+				"url": "https://vertx.io"
+			}
+		},
+		"menu": {
+			"intern": [
+				{
+					"name": "About",
+					"href": "/reactive/",
+					"css_class": "home"
+				},
+				{
+					"name": "Releases",
+					"href": "/reactive/releases/",
+					"css_class": "tags",
+					"releases_submenu": true
+				},
+				{
+					"name": "Documentation",
+					"href": "/reactive/documentation/",
+					"css_class": "book"
+				},
+				{
+					"name": "Roadmap",
+					"href": "/reactive/roadmap/",
+					"css_class": "road"
+				},
+				{
+					"name": "Paid support",
+					"href": "/reactive/support/",
+					"css_class": "doctor"
+				},
+				{
+					"name": "FAQ",
+					"href": "/reactive/faq/",
+					"css_class": "circle help"
+				}
+			],
+			"extern": [
+				{
+					"name": "Source code",
+					"href": "https://github.com/hibernate/hibernate-reactive",
+					"css_class": "code"
+				},
+				{
+					"name": "Issue tracker",
+					"href": "https://github.com/hibernate/hibernate-reactive/issues",
+					"css_class": "bug"
+				},
+				{
+					"name": "Security issue",
+					"href": "https://access.redhat.com/security/team/contact/",
+					"css_class": "lock"
+				},
+				{
+					"name": "Forum",
+					"href": "https://discourse.hibernate.org/c/hibernate-reactive",
+					"css_class": "comments"
+				},
+				{
+					"name": "CI",
+					"href": "https://github.com/hibernate/hibernate-reactive/actions",
+					"css_class": "treatment"
+				}
+			]
+		}
+	}
+}

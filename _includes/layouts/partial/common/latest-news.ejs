@@ -1,0 +1,54 @@
+<%
+const project_description = projects[project];
+const blog_suffix_url = (project_description && project_description.blog_tag_url) ? project_description.blog_tag_url + "/" : "";
+const blog_url = `https://in.relation.to/${blog_suffix_url}`;
+const blog_json_feed = `${links.news_feed_root_url}/${blog_suffix_url ? project_description.blog_tag_url : "global"}.json`;
+%>
+
+<div class="ui segment raised news" id="latest-news" style="display:none">
+    <h3>Latest news</h3>
+    <div id="feed">
+    </div>
+    <a class="ui right labeled icon button" href="<%= blog_url %>">
+        <i class="right arrow icon"></i>
+        Other news
+    </a>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "<%- blog_json_feed %>",
+            jsonpCallback: "getBlogEntries",
+            dataType: "jsonp",
+
+            // Work with the response
+            success: function (data) {
+                var feedDiv = $('#feed');
+                feedDiv.empty();
+                for (var i = 0; i < data.length; i++) {
+                    var entry = data[i];
+                    var entryDate = new Date(entry.date);
+                    var dateString =
+                        entryDate.getFullYear() + '-'
+                        + ('0' + (entryDate.getMonth() + 1)).slice(-2) + '-'
+                        + ('0' + entryDate.getDate()).slice(-2);
+                    feedDiv.append(
+                        $('<div class="news-item"/>').append(
+                            $('<h4/>').append(
+                                $('<a href="' + entry.url + '" />').text(entry.title)
+                            )
+                        ).append(
+                            $('<small/>').text(dateString)
+                        ).append(
+                            $('<p/>').text(entry.snippet)
+                        ).append(
+                            '<hr/>'
+                        )
+                    );
+                }
+                $('#latest-news').fadeIn();
+            }
+        });
+    });
+</script>

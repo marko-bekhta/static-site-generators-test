@@ -1,0 +1,3 @@
+== Reference implementation
+
+Hibernate Validator 6.x is the reference implementation http://beanvalidation.org/[Bean Validation 2.0].

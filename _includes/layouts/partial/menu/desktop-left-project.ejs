@@ -1,0 +1,92 @@
+<%
+const current_path = `${page.url.replace(/index\.html$/, '').replace(/\.html$/, "/")}`;
+const project_description = projects[project];
+const displayed_series = project_description.active_release_series;
+const stable_series = project_description.latest_stable_series;
+%>
+
+
+<div class="column three wide computer only print hidden">
+    <div class="ui fluid vertical menu">
+        <%
+        const active_menu_item = project_description.menu.intern
+                .filter(el => current_path.startsWith(el.href))
+                .reduce((prev, curr) => prev.href.lenght < curr.href.lenght ? prev : curr)
+        %>
+        <%
+        for (const menu of project_description.menu.intern ) {
+            const active = menu.href === active_menu_item.href
+        if (menu.releases_submenu && displayed_series?.length) {
+        %>
+            <div class="ui dropdown link item <%= active ? "selected" : "" %>">
+                <%= menu.name %>
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                    <%
+                        const overview_active = current_path === menu.href;
+                    %>
+                    <a class="item <%= overview_active ? "selected" : "" %>" href="<%= menu.href %>">
+                        Overview
+                    </a>
+                    <%
+                    for (const series of displayed_series ) {
+                        const submenu_href = `${menu.href}${series.version}/`;
+                        const submenu_active = current_path.startsWith(submenu_href);
+                    %>
+                    <a class="item <%= submenu_active ? "selected" : "" %>" href="<%= submenu_href %>">
+                        <%= series.version %>
+                        <%- series.releases[0].version === series.version ? `&nbsp;&nbsp;${series.releases[0].stable ? '<span class="ui label orange">development</span>' : '<span class="ui label green">latest stable</span>'}` : '' %>
+                    </a>
+
+                    <% } %>
+                </div>
+            </div>
+        <%
+        } else if (menu.documentation_submenu) {
+            const documentation_displayed_series = project_description.release_series.values;
+        %>
+        <div class="ui dropdown link item <%= active ? "selected" : "" %>">
+            <%= menu.name %>
+            <i class="icon dropdown"></i>
+            <div class="menu">
+                <%
+                for (const series of documentation_displayed_series ) {
+                    const submenu_href = `${menu.href}${series.version}/`;
+                    const submenu_active = current_path.startsWith(submenu_href);
+                %>
+                <a class="item <%= submenu_active ? "selected" : "" %>" href="<%= submenu_href %>">
+                    <%= series.version %>
+                    <%- series.releases[0].version === series.version ? `&nbsp;&nbsp;${series.releases[0].stable ? '<span class="ui label orange">development</span>' : '<span class="ui label green">latest stable</span>'}` : '' %>
+                </a>
+
+                <% } %>
+            </div>
+        </div>
+
+        <% } else { %>
+            <a href="<%= menu.href %>" class="item <%= active ? "selected" : "" %>">
+                <i class="grid icon <%= menu.css_class %>"></i>
+                <%= menu.name %>
+            </a>
+        <% } %>
+
+        <% } %>
+
+    </div>
+    <div class="ui fluid vertical menu">
+        <%
+        for (const menu of project_description.menu.extern ) {
+        %>
+            <a href="<%= menu.href %>" class="item">
+                <i class="grid icon <%= menu.css_class %>"></i>
+                <%= menu.name %>
+            </a>
+        <% } %>
+    </div>
+    <hr>
+    <div class="license">
+        Released under the
+        <a href="<%= project_description.license.url %>"><%= project_description.license.name %></a>
+    </div>
+
+</div>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="59e0ac32-8319-4825-9700-fdf89743d218" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_data/projects.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_data/site.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/layout.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/common/latest-news.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/footer.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/head.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/header.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/menu/desktop-left-project.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/project/banner.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/project/empty-buttons.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/partial/project/with-news.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/layouts/project.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/page-includes/validator/index/index1.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/page-includes/validator/index/index2.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/page-includes/validator/index/index3.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/page-includes/validator/index/index4.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/page-includes/validator/index/index5.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asciidoc-templates/listing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/404.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/about/index.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/css/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/index.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/validator/index.njk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/prism.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/books/harnessing-hibernate.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/books/hibernate-tips.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/books/high-performance-java-persistence.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/books/java-persistence-with-hibernate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/atlassian.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/discourse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/epam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/github.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/redhat-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/redhat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/sap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/travis-ci.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/contributors/zulip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hibernate-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hibernate_icon_whitebkg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hsearch-architecture-outbox-polling-elasticsearch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hv-maven-import-options-idea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/redhat-developers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/sponsored-by-redhat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/tck-jsr-349-setup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/_data/metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/layouts/base.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/layouts/home.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/layouts/post.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/postslist.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/404.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/about/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/blog.11tydata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/fifthpost.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/firstpost.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/fourthpost/fourthpost.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/fourthpost/possum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/secondpost.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blog/thirdpost.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/feed/feed.11tydata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/feed/feed.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/feed/json.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/index.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/sitemap/sitemap.xml.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/tags-list.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/tags.njk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eleventy.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eleventy.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/message-box.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/prism-diff.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/_data/links.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QK0Tw54Pfe7ZLo6lr6dzm6ZM4q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "20",
+    "last_opened_file_path": "/home/marko/development/projects/opensource/public-site-test/public/css",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/css" />
+      <recent name="$PROJECT_DIR$/content/validator/_include" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/content/css" />
+      <recent name="$PROJECT_DIR$/_includes/page-includes/validator/index" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59e0ac32-8319-4825-9700-fdf89743d218" name="Changes" comment="" />
+      <created>1685086976502</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685086976502</updated>
+      <workItem from="1685086977517" duration="3351000" />
+      <workItem from="1685091350271" duration="4436000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
