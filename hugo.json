@@ -1,0 +1,48 @@
+{
+  "baseURL": "http://hibernate.org/",
+  "languageCode": "en-us",
+  "title": "Hibernate",
+  "theme": "hibernate",
+  "markup": {
+    "asciidocExt": {
+      "backend": "html5",
+      "extensions": [],
+      "failureLevel": "fatal",
+      "noHeaderOrFooter": true,
+      "preserveTOC": false,
+      "safeMode": "unsafe",
+      "sectionNumbers": false,
+      "trace": false,
+      "verbose": false,
+      "workingFolderCurrent": false,
+      "attributes": {}
+    }
+  },
+  "security": {
+    "enableInlineShortcodes": false,
+    "exec": {
+      "allow": [
+        "^go$",
+        "^npx$",
+        "^postcss$",
+        "^asciidoctor$"
+      ],
+      "osEnv": [
+        "(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM|RUBYLIB|GEM_PATH)$"
+      ]
+    },
+    "funcs": {
+      "getenv": [
+        "^HUGO_"
+      ]
+    },
+    "http": {
+      "methods": [
+        "(?i)GET|POST"
+      ],
+      "urls": [
+        ".*"
+      ]
+    }
+  }
+}

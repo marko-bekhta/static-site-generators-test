@@ -1,0 +1,101 @@
+{{ define "main" }}
+<script>
+	jQuery.ajax({
+		url: "https://hibernate.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e/en_US-ny35gm-1988229788/6206/19/1.4.1/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?collectorId=7d71341e",
+		type: "get",
+		cache: true,
+		dataType: "script"
+	});
+	window.ATL_JQ_PAGE_PROPS = {
+		"triggerFunction": function(showCollectorDialog) {
+			jQuery("#feedback-button").click(function(e) {
+				e.preventDefault();
+				showCollectorDialog();
+			});
+		},
+		fieldValues: {
+			components : '10380',
+			summary: 'Broken link: ' + window.location.href,
+			description: 'Broken link: ' + window.location.href + '\n\n' +
+					'Please provide your page of origin:\n' + document.referrer + '\n\n' +
+					'Please describe what you expected this link to point to:\n\n'
+		}
+	};
+</script>
+<div class="jumbotron small">
+	<div class="ui container">
+		<h1>
+			<span>Hibernate. Everything data.</span>
+		</h1>
+		<h2>
+			<span>404</span>
+		</h2>
+	</div>
+</div>
+<div class="ui container page-content">
+	<div class="content" id="content">
+		<div class="ui two column centered grid">
+			<div class="column">
+				<h2>Oh snap!</h2>
+				<div class="dead-link">
+					<div class="ui floating info icon message">
+						<i class="icon hand paper"></i>
+						<div class="content">
+							<div class="header">
+								(Hand waving): This is not the page you are looking for!
+							</div>
+							<p>
+								Looks like you have found a broken link!
+							</p>
+						</div>
+					</div>
+					<p>
+						Please report it mentioning which page you came from and which link you clicked on:
+					</p>
+					<p class="text-center">
+						<button class="ui right label button primary" id="feedback-button">
+							<i class="icon arrow circle up"></i>
+							Report website error
+						</button>
+					</p>
+					<p>
+						Otherwise, best is to hit the good old back button or start back at the
+						<a href="#top">top of the site</a>
+						.
+					</p>
+					<p>
+						You can also fix the problem yourself by sending a pull request to this GitHub project:
+						<a href="https://github.com/hibernate/hibernate.org">github.com/hibernate/hibernate.org</a>
+						.
+					</p>
+				</div>
+				<div class="invalid-dtd" style="display:none;">
+					<div class="ui floating info icon message">
+						<i class="icon hand paper"></i>
+						<div class="content">
+							<div class="header">
+								(Hand waving): This is not the page you are looking for!
+							</div>
+							<p>
+								This DTD does not exist.
+							</p>
+							<p>
+								For a list of available DTDs, see
+								<a href="/dtd/">here.</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	console.log(window.location.pathname)
+	if (/^\/dtd\/.*$/.test(window.location.pathname)) {
+		document.querySelector('.dead-link').style.display = 'none';
+		document.querySelector('.invalid-dtd').style.display = 'block';
+	}
+</script>
+{{ end }}

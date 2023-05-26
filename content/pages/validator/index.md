@@ -1,0 +1,43 @@
+---
+layout: project
+url: /validator
+---
+
+== Application layer agnostic validation
+
+Hibernate Validator allows to express and validate application constraints. The default metadata source are annotations, with the ability to override and extend through the use of XML. It is not tied to a specific application tier or programming model and is available for both server and client application programming. But a simple example says more than 1000 words:
+
+[source,java]
+----
+public class Car {
+
+   @NotNull
+   private String manufacturer;
+
+   @NotNull
+   @Size(min = 2, max = 14)
+   private String licensePlate;
+
+   @Min(2)
+   private int seatCount;
+
+   // ...
+}
+----
+
+== Extendable
+
+Hibernate Validator offers a http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#chapter-bootstrapping[configurable bootstrap API] as well as a range of http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-builtin-constraints[built-in constraints]. The latter can easily be extended by creating http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-customconstraints[custom constraints].
+
+== Rich metadata API
+
+Hibernate Validator gives access to constraint configuration via a http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-metadata-api[metadata API] facilitating, for example, tooling integration.
+
+== Reference implementation
+
+Hibernate Validator 6.x is the reference implementation http://beanvalidation.org/[Bean Validation 2.0].
+
+== Added value
+
+Hibernate Validator offers additional value on top of the features required by Bean Validation. For example, a http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-programmatic-api[programmatic constraint configuration API] as well as an http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-annotation-processor[annotation processor] which plugs into the build process and raises compilation errors whenever constraint annotations are incorrectly used.
+
