@@ -8,3 +8,7 @@ public/
 _multiconfig.yml
 .idea
 _site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor

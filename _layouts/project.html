@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+{% assign project_description = site.data.site.projects[page.project] %}
+
+{% include /partial/project/banner.html %}
+<div class="heroes">
+    <div class="page-title small">
+        <div class="ui container">
+            <h4>
+                {{ project_description.description }}
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="ui container page-content">
+    <div class="ui stackable grid">
+        <div class="column three wide computer only print hidden">
+            {% include /partial/menu/desktop-left-project.html %}
+        </div>
+        <div class="column thirteen wide computer sixteen wide mobile">
+            {% if page.has_news %}
+            {% include /partial/project/with-news.html %}
+            {% else %}
+            {{ content }}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.ui.menu .ui.dropdown').dropdown({on: 'hover'});
+    });
+</script>

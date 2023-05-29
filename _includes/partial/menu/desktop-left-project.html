@@ -1,0 +1,90 @@
+{%
+assign current_path = `${page.url.replace(/index\.html$/, '').replace(/\.html$/, "/")}`;
+assign project_description = site.data.site.projects[page.project];
+assign displayed_series = project_description.active_release_series;
+assign stable_series = project_description.latest_stable_series;
+%}
+
+<div class="column three wide computer only print hidden">
+    <div class="ui fluid vertical menu">
+        {% assign active_menu_item = project_description.menu.intern.select {|element|
+        current_path.start_with?(element.href)}.max {|a, b| a.href.size <=> b.href.size } %}
+        {% for menu in project_description.menu.intern %}
+
+        {% assign active = menu.href === active_menu_item.href %}
+        {% if menu.releases_submenu && !displayed_series.nil? && !displayed_series.empty? %}
+        <div class="ui dropdown link item {{ active ? 'selected' : '' }}">
+            {{ menu.name }}
+            <i class="icon dropdown"></i>
+            <div class="menu">
+                {% assign overview_active = current_path === menu.href %}
+                <a class="item {{ overview_active ? 'selected' : '' }}" href="{{ menu.href }}">
+                    Overview
+                </a>
+                {% for series in displayed_series %}
+                {% assign submenu_href = {{menu.href}} + {{series.version}} + "/" %}
+                {% assign submenu_active = current_path.start_with?(submenu_href) %}
+                <a class="item {{ submenu_active ? 'selected' : '' }}" href="{{ submenu_href }}">
+                    {{ series.version }}
+                    {% assign latest_release = series.releases[0] }}
+                    {% if !latest_release.stable }}
+                    <span class="ui label orange">development</span>
+                    {% endif %}
+                    {% if stable_series.version == series.version %}
+                    &nbsp;&nbsp; <span class="ui label green">latest stable</span>
+                    {% endif %}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% elsif menu.documentation_submenu %}
+        {% assign documentation_displayed_series = project_description.release_series.values %}
+        <div class="ui dropdown link item {{ active ? ' selected' : '' }}">
+            {{ menu.name }}
+            <i class="icon dropdown"></i>
+            <div class="menu">
+                {% for series in documentation_displayed_series %}
+                {%
+                assign submenu_href = `${menu.href}${series.version}/`;
+                assign submenu_active = current_path.startsWith(submenu_href);
+                %}
+                <a class="item {{ submenu_active ? ' selected' : ''}}" href="{{ submenu_href }}">
+                    {{ series.version }}
+                    {% assign latest_release = series.releases[0] }}
+                    {% if !latest_release.stable }}
+                    <span class="ui label orange">development</span>
+                    {% endif %}
+                    {% if stable_series.version == series.version %}
+                    &nbsp;&nbsp; <span class="ui label green">latest stable</span>
+                    {% endif %}
+                </a>
+
+                {% endfor %}
+            </div>
+        </div>
+
+        {% else %}
+        <a href="{{menu.href }}" class="item {{ active ? ' selected' : ''}}">
+            <i class="grid icon {{ menu.css_class }}"></i>
+            {{ menu.name }}
+        </a>
+        {% endif %}
+        {% endfor %}
+
+    </div>
+    <div class="ui fluid vertical menu">
+        {% for menu in project_description.menu.extern %}
+        <a href="{{ menu.href }}" class="item">
+            <i class="grid icon {{ menu.css_class }}"></i>
+            {{ menu.name }}
+        </a>
+        {% endfor %}
+    </div>
+    <hr>
+    <div class="license">
+        Released under the
+        <a href="{{ project_description.license.url }}">{{ project_description.license.name }}</a>
+    </div>
+
+</div>
+
